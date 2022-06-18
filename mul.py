@@ -1,3 +1,5 @@
+import pyttsx3
+
 
 n = input("Enter the number")
 
@@ -18,5 +20,8 @@ txt = ""
 
 for i in range(1,11):
     mul = i * int(n)
-    txt += str(i) + " " + dic[n] + " are " + str(mul) + "\n"
-print(txt)    
+    txt += str(i) + " " + dic[n] + " are " + str(mul) + "\n"    
+
+e = pyttsx3.init()
+e.say(txt)
+e.runAndWait()
