@@ -1,4 +1,5 @@
-n = int(input("Enter the number"))
+
+n = input("Enter the number")
 
 dic = {
     "1" : "ones",
@@ -13,3 +14,9 @@ dic = {
     "10": "tens"
 }
 
+txt = ""
+
+for i in range(1,11):
+    mul = i * int(n)
+    txt += str(i) + " " + dic[n] + " are " + str(mul) + "\n"
+print(txt)    
